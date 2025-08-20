@@ -35,6 +35,10 @@ app.use(function (req, res, next) {
   });
 DB();
 
+app.get("/", (req, res) => {
+  res.send("Server is running!");
+});
+
 app.use("/api/v1/auth", auth);
 app.use("/api/v1/admin", admin);
 app.use("/api/v1/story",story);
